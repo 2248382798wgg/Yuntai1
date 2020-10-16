@@ -1,15 +1,66 @@
 <template>
 	<view>
-		<view>
-			<image style="width: 100%;height: 350rpx;" src="../../static/e241fed057d0402699aeb6bbaf6d208.jpg"></image>
-		</view>
-		
-		<view style="width: 100%;display: flex;justify-content: center;">
-			<view style="border-radius: 300rpx;overflow: hidden; width: 12vh;height: 12vh;">
-				<open-data type="userAvatarUrl"></open-data>
+		<view class="contnt_img" style="background-image: url('../../static/e241fed057d0402699aeb6bbaf6d208.jpg');height: 200px;">
+			<view style="padding-top: 5%;">
+				<view style="width: 100%;display: flex;justify-content: center;">
+					<view style="border-radius: 300rpx;overflow: hidden; width: 12vh;height: 12vh;">
+						<open-data type="userAvatarUrl"></open-data>
+					</view>
+				</view>
+
+				<view style="display: flex;justify-content: center;">
+					<view style="width:10%;font-weight: 600;font-size: 18px;color: #FFFFFF;">
+						<open-data type="userNickName"></open-data>
+					</view>
+				</view>
 			</view>
-		
 		</view>
+
+
+
+
+		<!-- 我的购票 -->
+		<view style="display: flex;width: 100%;justify-content: center;" @click="buy">
+			<view style="background-color: #FFFFFF; width: 90%;height: 60px;border-radius: 5px;margin-top: -5%;box-shadow: 5px 5px 5px #888888;">
+				<view style="display: flex;">
+					<image style="width: 16%;height:43px;margin-left: 2%;margin-top: 2%;" src="../../static/57@$BK9~~@D3EA_5W97OS0B.png"></image>
+					<view style="margin-top: 5%;">我的购票</view>
+				</view>
+
+			</view>
+		</view>
+
+		<view style="display: flex;width: 100%;justify-content: center;margin-top:10%;">
+			<view style="background-color: #FFFFFF; width: 90%;height: 60px;border-radius: 5px;margin-top: -5%;box-shadow: 5px 5px 5px #888888;">
+				<view style="display: flex;">
+					<image style="width: 16%;height:43px;margin-left: 2%;margin-top: 2%;" src="../../static/57@$BK9~~@D3EA_5W97OS0B.png"></image>
+					<view style="margin-top: 5%;">我的购票</view>
+				</view>
+
+			</view>
+		</view>
+
+		<view style="display: flex;width: 100%;justify-content: center;margin-top:10%;">
+			<view style="background-color: #FFFFFF; width: 90%;height: 60px;border-radius: 5px;margin-top: -5%;box-shadow: 5px 5px 5px #888888;">
+				<view style="display: flex;">
+					<image style="width: 16%;height:43px;margin-left: 2%;margin-top: 2%;" src="../../static/57@$BK9~~@D3EA_5W97OS0B.png"></image>
+					<view style="margin-top: 5%;">我的购票</view>
+				</view>
+
+			</view>
+		</view>
+
+
+		<view style="display: flex;width: 100%;justify-content: center;margin-top:10%;">
+			<view style="background-color: #FFFFFF; width: 90%;height: 60px;border-radius: 5px;margin-top: -5%;box-shadow: 5px 5px 5px #888888;">
+				<view style="display: flex;">
+					<image style="width: 16%;height:43px;margin-left: 2%;margin-top: 2%;" src="../../static/57@$BK9~~@D3EA_5W97OS0B.png"></image>
+					<view style="margin-top: 5%;">我的购票</view>
+				</view>
+
+			</view>
+		</view>
+		<!-- 我的购票 -->
 	</view>
 </template>
 
@@ -17,11 +68,15 @@
 	export default {
 		data() {
 			return {
-				
+
 			}
 		},
 		methods: {
-			
+			buy() {
+				uni.navigateTo({
+					url: '../buy/buy'
+				})
+			}
 		}
 	}
 </script>

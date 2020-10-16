@@ -228,32 +228,32 @@ var _default =
         icon: ">" },
 
       {
-        img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+        img: "../../static/imgfour.png",
         name: "子房湖水上乐园",
         icon: ">" },
 
       {
-        img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+        img: "../../static/imgeight.png",
         name: "白龙瀑",
         icon: ">" },
 
       {
-        img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+        img: "../../static/imgfourr.png",
         name: "龟背石",
         icon: ">" },
 
       {
-        img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+        img: "../../static/imgnight.png",
         name: "黑龙洞",
         icon: ">" },
 
       {
-        img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+        img: "../../static/imgone.png",
         name: "玉面大佛",
         icon: ">" },
 
       {
-        img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+        img: "../../static/imgselevent.png",
         name: "一线天",
         icon: ">" },
 
@@ -452,8 +452,15 @@ var _default =
       // Toast(`展开: ${event.detail}`);
     },
     onClose: function onClose(event) {
-      // Toast(`关闭: ${event.detail}`);
-    } } };exports.default = _default;
+
+    } // Toast(`关闭: ${event.detail}`);
+    // bonus(res,id) {
+    // 	var img = res.img
+    // 	uni.navigateTo({
+    // 		url:'../dragon/dragon?img=' + img
+    // 	})
+    // }
+  } };exports.default = _default;
 
 /***/ }),
 

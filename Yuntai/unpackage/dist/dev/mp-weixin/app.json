@@ -9,7 +9,11 @@
     "pages/referral/referral",
     "pages/spot/spot",
     "pages/gorge/gorge",
-    "pages/buy/buy"
+    "pages/buy/buy",
+    "pages/travel/travel",
+    "pages/suggest/suggest",
+    "pages/park/park",
+    "pages/dragon/dragon"
   ],
   "subPackages": [],
   "window": {

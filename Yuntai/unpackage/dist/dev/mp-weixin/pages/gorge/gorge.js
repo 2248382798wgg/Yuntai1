@@ -139,6 +139,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
 var _index = _interopRequireDefault(__webpack_require__(/*! ../../testdata/index.json */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -149,11 +152,11 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../testdata/index
 //
 //
 //
+//
+//
+//
 //引入js文件
-var _default = { data: function data() {return { title: '', img: '', msg: '' };}, methods: {},
-  onLoad: function onLoad(res) {
-    console.log(_index.default.gorgeone);
-    this.title = res.data;
+var _default = { data: function data() {return { title: '', img: '', msg: '' };}, methods: {}, onLoad: function onLoad(res) {console.log(_index.default.gorgeone);this.title = res.data;
     this.img = res.img;
     if (res.index == 0) {
       this.msg = _index.default.gorgeone;

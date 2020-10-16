@@ -1,10 +1,13 @@
 <template>
 	<view>
 		<view style="font-size: 40rpx;margin: 3%;">{{title}}</view>
-		<view style="margin: 2%;">{{msg.titone}}</view>
-		<view>{{msg.onemsg}}</view>
-		<view style="margin: 2%;">{{msg.tittwo}}</view>
-		<image :src="img"></image>
+		<view style="margin: 2%;font-size: 20px;font-weight: 700;">{{msg.titone}}</view>
+		<view style="padding: 3%;line-height: 28px;">{{msg.onemsg}}</view>
+		<view style="margin: 2%;font-size: 20px;font-weight: 700;">{{msg.tittwo}}</view>
+		<view style="padding: 3%;">
+			<image style="width: 100%;height: 200px;" :src="img"></image>
+		</view>
+		
 	</view>
 </template>
 

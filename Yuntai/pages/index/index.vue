@@ -17,6 +17,52 @@
 		<!-- 轮播 -->
 
 
+
+		<!-- 天气 -->
+		<!-- <view class="weather yesterday">
+			<view>
+				<view class='date'>今天</view>
+				<view class='location'>{{basic.location}}/{{basic.parent_city}}</view>
+				<view class='tmp'>{{today.tmp_min}}℃~{{today.tmp_max}}℃</view>
+				<view class='cond_txt'>{{today.cond_txt_d}}</view>
+			</view>
+			<view>
+				<view class='weather_icon'>
+					<image :src='todyIcon'></image>
+				</view>
+				<view class='lastUpdateDate'>最后更新：{{update}}</view>
+			</view>
+		</view>
+		<view class="weather today">
+			<view>
+				<text>明天</text>
+				<view class='location'>{{basic.location}}/{{basic.parent_city}}</view>
+				<view class='tmp'>{{tomorrow.tmp_min}}℃~{{tomorrow.tmp_max}}℃</view>
+				<view class='cond_txt'>{{tomorrow.cond_txt_d}}</view>
+			</view>
+			<view>
+				<view class='weather_icon'>
+					<image :src='tomorrowIcon'></image>
+				</view>
+				<view class='lastUpdateDate'>最后更新：{{update}}</view>
+			</view>
+		</view>
+		<view class="weather tomorrow">
+			<view>
+				<text>后天</text>
+				<view class='location'>{{basic.location}}/{{basic.parent_city}}</view>
+				<view class='tmp'>{{afterTomor.tmp_min}}℃~{{afterTomor.tmp_max}}℃</view>
+				<view class='cond_txt'>{{afterTomor.cond_txt_d}}</view>
+			</view>
+			<view>
+				<view class='weather_icon'>
+					<image :src='afterTomorIcon'></image>
+				</view>
+				<view class='lastUpdateDate'>最后更新：{{update}}</view>
+			</view>
+		</view> -->
+		<!-- 天气 -->
+
 		<!-- 介绍 -->
 		<view>
 			<view class="pure_top"></view>
@@ -76,57 +122,100 @@
 				shops: '',
 				sceniced: '',
 				hots: '',
-				hoteds: ''
+				hoteds: '',
+				// update:'',
+				// basic:'',
+				// today: '',
+				// tomorrow: '',
+				// afterTomor: '',
+				// todyIcon: '../../static/0.1.jpg',
+				// tomorrowIcon: '../../static/0.1.jpg',
+				// afterTomorIcon: '../../static/0.1.jpg',
+				// longitude:'',
+				// latitude:'',
+				// wggg:'121'
 			}
 		},
+		onShow(){
+			
+		},
 		created() {
-
+			
 		},
 		onLoad() {
-			console.log(json)
 			this.images = json.image
 			this.shops = json.shop
 			this.sceniced = json.scenic
 			this.hots = json.hot
 			this.hoteds = json.hoted
-
-
-
+			// this.wgg()
 		},
 		methods: {
+			
+			// wgg: async function(){
+			// 	uni.getLocation({
+			// 		type: 'wgs84',
+			// 		success:function(res) {
+			// 			var latitude = res.latitude
+			// 										var longitude = res.longitude
+			// 										var _this = this;
+			// 										var key = '30ffef50e6de42f5aaec1b19a742ab8b'; //你自己的key
+			// 			var url = 'https://free-api.heweather.com/s6/weather?key=' + key + '&location=' + longitude + ',' + latitude;
+			// 			      uni.request({
+			// 			        url: url,
+			// 			        method: "GET"
+			// 			    })
+			// 				.then(data => {//data为一个数组，数组第一项为错误信息，第二项为返回数据
+			// 				        var [error, res]  = data;
+			// 				        console.log(res.data);
+			// 						console.log(this.wggg)
+			// 				    })
+			// 		}
+			// 	}) 
+				
+			
+			    
+			
+			// },
 			guide(e) {
-				if(e == 0) {
+				if (e == 0) {
 					uni.navigateTo({
-						url:'../referral/referral'
+						url: '../referral/referral'
 					})
 				}
-				if(e == 1) {
-					
+				if (e == 1) {
+
 					uni.navigateTo({
-						url:'../ticket/ticket'
+						url: '../ticket/ticket'
 					})
 				}
-				if(e == 2) {
-					
-				}
-				if(e == 3) {
+				if (e == 2) {
 					uni.navigateTo({
-						url:'../guide/guide'
+						url:'../travel/travel'
+					})
+				}
+				if (e == 3) {
+					uni.navigateTo({
+						url: '../guide/guide'
 					})
 				}
 			},
 			user(e) {
-				
-				if(e == 0) {
+
+				if (e == 0) {
 					uni.navigateTo({
-						url:'../spot/spot'
+						url: '../spot/spot'
 					})
 				}
-				if(e == 1) {
-					
+				if (e == 1) {
+					uni.navigateTo({
+						url:'../suggest/suggest'
+					})
 				}
-				if(e == 2) {
-					
+				if (e == 2) {
+					uni.navigateTo({
+						url:'../park/park'
+					})
 				}
 			}
 		}
@@ -158,4 +247,60 @@
 	}
 
 	/* 介绍 */
+	.weather {
+		height: 110px;
+		width: 100%;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		color: #FFF;
+		padding: 5PX 15px;
+		display: flex;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
+
+	.weather>view {
+		flex: 1;
+	}
+
+	.weather>view>view {
+		margin: 5px 0;
+	}
+
+	.yesterday {
+		background-color: #30BCAF;
+	}
+
+	.today {
+		background-color: #78A4be;
+	}
+
+	.tomorrow {
+		background-color: #FCB654;
+	}
+
+	.location,
+	.cond_txt {
+		font-size: 14px;
+	}
+
+	.date,
+	.tmp {
+		font-weight: bold;
+	}
+
+	.weather_icon {
+		text-align: center;
+		height: 65px;
+	}
+
+	.weather_icon image {
+		width: 75px;
+		height: 100%;
+	}
+
+	.lastUpdateDate {
+		font-size: 10px;
+		text-align: center;
+	}
 </style>

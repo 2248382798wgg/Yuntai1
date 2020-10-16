@@ -1,1 +1,1 @@
-<view></view>
+<view style="display:flex;width:100%;justify-content:center;"><block wx:if="{{ner==''}}"><view>没有更多内容</view></block><block wx:else><view style="background-color:#FFFFFF;width:90%;height:166px;box-shadow:5px 5px 5px #888888;border-radius:5px;"><view style="display:flex;"><image style="width:46%;height:127px;border-radius:5px;margin:5%;" src="{{ner.img}}"></image><view style="margin-top:5%;font-size:15px;">{{ner.name+''}}<view style="margin-top:5%;">{{'数量 '+ner.len}}</view></view></view></view></block></view>

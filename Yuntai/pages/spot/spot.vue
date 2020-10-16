@@ -2,7 +2,7 @@
 	<view class="content">
 		<van-collapse :value="activeNames" @change="onChange" @open="onOpen" @close="onClose">
 			<van-collapse-item title="红石峡" name="1">
-				<view class="block" v-for="item in items">
+				<view class="block" v-for="item in items" @click="bonus(item,index)">
 					<view class="blockone">
 						<view class="left">
 							<image :src="item.img"></image>
@@ -96,32 +96,32 @@
 						icon: ">"
 					},
 					{
-						img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+						img: "../../static/imgfour.png",
 						name: "子房湖水上乐园",
 						icon: ">"
 					},
 					{
-						img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+						img: "../../static/imgeight.png",
 						name: "白龙瀑",
 						icon: ">"
 					},
 					{
-						img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+						img: "../../static/imgfourr.png",
 						name: "龟背石",
 						icon: ">"
 					},
 					{
-						img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+						img: "../../static/imgnight.png",
 						name: "黑龙洞",
 						icon: ">"
 					},
 					{
-						img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+						img: "../../static/imgone.png",
 						name: "玉面大佛",
 						icon: ">"
 					},
 					{
-						img: "../../static/692b5e8bf4bd5c29bd1db3b3a262397.png",
+						img: "../../static/imgselevent.png",
 						name: "一线天",
 						icon: ">"
 					},
@@ -322,6 +322,12 @@
 			onClose(event) {
 				// Toast(`关闭: ${event.detail}`);
 			}
+			// bonus(res,id) {
+			// 	var img = res.img
+			// 	uni.navigateTo({
+			// 		url:'../dragon/dragon?img=' + img
+			// 	})
+			// }
 		}
 	}
 </script>
@@ -344,6 +350,7 @@
 
 	.block {
 		height: auto;
+		padding: 3%;
 	}
 
 	.blockone {

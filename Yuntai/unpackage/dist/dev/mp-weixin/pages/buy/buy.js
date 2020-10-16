@@ -134,11 +134,23 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
-
+    return {
+      ner: '' };
 
   },
   methods: {},
@@ -146,7 +158,8 @@ var _default =
 
   onLoad: function onLoad(options) {
     var ner = JSON.parse(decodeURIComponent(options.data));
-    console.log(ner);
+    this.ner = ner;
+    console.log(this.ner);
   } };exports.default = _default;
 
 /***/ })

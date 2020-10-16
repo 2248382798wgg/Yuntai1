@@ -205,6 +205,52 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var _index = _interopRequireDefault(__webpack_require__(/*! ../../testdata/index.json */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -274,8 +320,87 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../testdata/index
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //引入js文件
-var _default = { data: function data() {return { images: '', shops: '', sceniced: '', hots: '', hoteds: '' };}, created: function created() {}, onLoad: function onLoad() {console.log(_index.default);this.images = _index.default.image;this.shops = _index.default.shop;this.sceniced = _index.default.scenic;this.hots = _index.default.hot;this.hoteds = _index.default.hoted;}, methods: { guide: function guide(e) {if (e == 0) {uni.navigateTo({ url: '../referral/referral' });}if (e == 1) {uni.navigateTo({ url: '../ticket/ticket' });}if (e == 2) {}if (e == 3) {uni.navigateTo({ url: '../guide/guide' });}}, user: function user(e) {if (e == 0) {uni.navigateTo({ url: '../spot/spot' });}if (e == 1) {}if (e == 2) {}} } };exports.default = _default;
+var _default = { data: function data() {return { images: '', shops: '', sceniced: '', hots: '', hoteds: '' // update:'',
+      // basic:'',
+      // today: '',
+      // tomorrow: '',
+      // afterTomor: '',
+      // todyIcon: '../../static/0.1.jpg',
+      // tomorrowIcon: '../../static/0.1.jpg',
+      // afterTomorIcon: '../../static/0.1.jpg',
+      // longitude:'',
+      // latitude:'',
+      // wggg:'121'
+    };}, onShow: function onShow() {}, created: function created() {}, onLoad: function onLoad() {this.images = _index.default.image;this.shops = _index.default.shop;this.sceniced = _index.default.scenic;this.hots = _index.default.hot;this.hoteds = _index.default.hoted; // this.wgg()
+  }, methods: { // wgg: async function(){
+    // 	uni.getLocation({
+    // 		type: 'wgs84',
+    // 		success:function(res) {
+    // 			var latitude = res.latitude
+    // 										var longitude = res.longitude
+    // 										var _this = this;
+    // 										var key = '30ffef50e6de42f5aaec1b19a742ab8b'; //你自己的key
+    // 			var url = 'https://free-api.heweather.com/s6/weather?key=' + key + '&location=' + longitude + ',' + latitude;
+    // 			      uni.request({
+    // 			        url: url,
+    // 			        method: "GET"
+    // 			    })
+    // 				.then(data => {//data为一个数组，数组第一项为错误信息，第二项为返回数据
+    // 				        var [error, res]  = data;
+    // 				        console.log(res.data);
+    // 						console.log(this.wggg)
+    // 				    })
+    // 		}
+    // 	}) 
+    // },
+    guide: function guide(e) {if (e == 0) {uni.navigateTo({ url: '../referral/referral' });}if (e == 1) {uni.navigateTo({ url: '../ticket/ticket' });}if (e == 2) {uni.navigateTo({ url: '../travel/travel' });}if (e == 3) {uni.navigateTo({ url: '../guide/guide' });}}, user: function user(e) {if (e == 0) {uni.navigateTo({ url: '../spot/spot' });}if (e == 1) {uni.navigateTo({ url: '../suggest/suggest' });}if (e == 2) {uni.navigateTo({ url: '../park/park' });}} } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
