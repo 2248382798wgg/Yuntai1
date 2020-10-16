@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/strategy/strategy",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/guide/guide"
   ],
   "subPackages": [],
   "window": {
@@ -37,6 +38,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap90.json"
+  "usingComponents": {}
 }

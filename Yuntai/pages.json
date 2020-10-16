@@ -3,8 +3,10 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				// "navigationBarTitleText": "uni-app"
-				"navigationStyle": "custom"
+				"navigationBarTitleText": "云台山景区",
+				"navigationBarBackgroundColor": "#00BF45"
+				
+				
 			}
 		}
 	    ,{
@@ -17,6 +19,13 @@
             "path" : "pages/my/my",
             "style" : {
 				"navigationStyle": "custom"
+			}
+        }
+        ,{
+            "path" : "pages/guide/guide",
+            "style" : {
+				"navigationBarTitleText": "地图导览",
+				"navigationBarBackgroundColor": "#00BF45"
 			}
         }
     ],

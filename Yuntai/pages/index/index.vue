@@ -1,9 +1,9 @@
 <template>
 	<view>
 		<!-- 头部 -->
-		<view style="background-color: #00BF45;width: 100%;height: 70px;">
+		<!-- <view style="background-color: #00BF45;width: 100%;height: 70px;">
 			<view style="text-align: center;padding-top: 6%;font-size: 18px;color: #FFFFFF;">云台山景区</view>
-		</view>
+		</view> -->
 		<!-- 头部 -->
 
 		<!-- 轮播 -->
@@ -22,7 +22,7 @@
 			<view class="pure_top"></view>
 
 			<view style="display: flex;width: 100%;">
-				<view v-for="shops in shops" :key='index' style="width: 25%;text-align: center;">
+				<view v-for="(shops,index) in shops" :key='index' style="width: 25%;text-align: center;" @click="guide(index)">
 					<image style="width: 50%;height: 50px;" :src="shops.shopping"></image>
 					<view style="font-size: 15px;">{{shops.name}}</view>
 				</view>
@@ -50,9 +50,9 @@
 							<image style="width: 87%;height: 118px;border-radius: 8px;margin-top: 3%;" :src="hots.img"></image>
 						</view>
 					</view>
-					
-					
-					
+
+
+
 					<view style="display: flex;width: 100%;margin-left: 3%;padding-top: 5%;">
 						<view v-for="hoteds in hoteds" :key='index' style="width: 50%;">
 							<view style="font-size: 18px;font-weight: 800;">{{hoteds.name}}</view>
@@ -60,16 +60,10 @@
 						</view>
 					</view>
 					<!-- 热门景点 -->
-
-
 				</view>
 			</view>
 		</view>
 		<!-- 介绍 -->
-
-
-
-
 	</view>
 </template>
 
@@ -82,7 +76,7 @@
 				shops: '',
 				sceniced: '',
 				hots: '',
-				hoteds:''
+				hoteds: ''
 			}
 		},
 		created() {
@@ -95,9 +89,27 @@
 			this.sceniced = json.scenic
 			this.hots = json.hot
 			this.hoteds = json.hoted
+
+
+
 		},
 		methods: {
-
+			guide(e) {
+				if(e == 0) {
+					
+				}
+				if(e == 1) {
+					
+				}
+				if(e == 2) {
+					
+				}
+				if(e == 3) {
+					uni.navigateTo({
+						url:'../guide/guide'
+					})
+				}
+			}
 		}
 	}
 </script>
