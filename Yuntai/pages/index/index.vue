@@ -31,7 +31,7 @@
 
 
 			<view style="display: flex;width: 100%;margin-top: 3%;">
-				<view v-for="sceniced in sceniced" :key='index' style="width: 25%;text-align: center;">
+				<view v-for="(sceniced,index) in sceniced" :key='index' style="width: 25%;text-align: center;" @click="user(index)">
 					<image style="width: 50%;height: 50px;" :src="sceniced.picture"></image>
 					<view style="font-size: 15px;">{{sceniced.name}}</view>
 				</view>
@@ -96,7 +96,9 @@
 		methods: {
 			guide(e) {
 				if(e == 0) {
-					
+					uni.navigateTo({
+						url:'../referral/referral'
+					})
 				}
 				if(e == 1) {
 					
@@ -111,6 +113,20 @@
 					uni.navigateTo({
 						url:'../guide/guide'
 					})
+				}
+			},
+			user(e) {
+				
+				if(e == 0) {
+					uni.navigateTo({
+						url:'../spot/spot'
+					})
+				}
+				if(e == 1) {
+					
+				}
+				if(e == 2) {
+					
 				}
 			}
 		}

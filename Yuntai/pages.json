@@ -5,54 +5,74 @@
 			"style": {
 				"navigationBarTitleText": "云台山景区",
 				"navigationBarBackgroundColor": "#00BF45"
-				
-				
+
+
 			}
-		}
-	    ,{
-            "path" : "pages/strategy/strategy",
-            "style" : {
-				"navigationStyle": "custom"
+		}, {
+			"path": "pages/strategy/strategy",
+			"style": {
+				"navigationBarTitleText": "攻略",
+				"navigationBarBackgroundColor": "#00BF45"
 			}
-        }
-        ,{
-            "path" : "pages/my/my",
-            "style" : {
-				"navigationStyle": "custom"
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#00BF45"
 			}
-        }
-        ,{
-            "path" : "pages/guide/guide",
-            "style" : {
+		}, {
+			"path": "pages/guide/guide",
+			"style": {
 				"navigationBarTitleText": "地图导览",
 				"navigationBarBackgroundColor": "#00BF45"
 			}
-        }
-        ,{
-            "path" : "pages/ticket/ticket",
-            "style" : {
+		}, {
+			"path": "pages/ticket/ticket",
+			"style": {
 				"navigationBarTitleText": "预定门票",
 				"navigationBarBackgroundColor": "#00BF45",
 				"usingComponents": {
-				  "van-tab": "../../wxcomponents/dist/tab/index",
-				  "van-tabs": "../../wxcomponents/dist/tabs/index"
+					"van-tab": "../../wxcomponents/dist/tab/index",
+					"van-tabs": "../../wxcomponents/dist/tabs/index"
 				}
+			}
+		}, {
+			"path": "pages/particulars/particulars",
+			"style": {
+				"navigationBarTitleText": "购票详情",
+				"usingComponents": {
+					"van-popup": "../../wxcomponents/dist/popup/index",
+					"van-field": "../../wxcomponents/dist/field/index",
+					"van-stepper": "../../wxcomponents/dist/stepper/index",
+					"van-datetime-picker": "../../wxcomponents/dist/datetime-picker/index"
+				}
+			}
+		}, {
+			"path": "pages/referral/referral",
+			"style": {
+				"navigationBarTitleText": "景区介绍"
+			}
+		}
+	    ,{
+            "path" : "pages/spot/spot",
+            "style" : {
+				"navigationBarTitleText": "景点介绍"
 			}
         }
         ,{
-            "path" : "pages/particulars/particulars",
+            "path" : "pages/gorge/gorge",
             "style" : {
-				"navigationBarTitleText": "购票详情",
-				"usingComponents": {
-				  "van-popup": "../../wxcomponents/dist/popup/index",
-				  "van-field": "../../wxcomponents/dist/field/index",
-				  "van-stepper": "../../wxcomponents/dist/stepper/index",
-				   "van-datetime-picker": "../../wxcomponents/dist/datetime-picker/index"
-				}
+				"navigationBarTitleText": "景点介绍"
+			}
+        }
+        ,{
+            "path" : "pages/buy/buy",
+            "style" : {
+				"navigationBarTitleText": "我的购票"
 			}
         }
     ],
-	
+
 	"tabBar": {
 		"color": "#707070",
 		"selectedColor": "#00BF45",
@@ -67,7 +87,7 @@
 				"pagePath": "pages/strategy/strategy",
 				"iconPath": "static/gonglue1.png",
 				"selectedIconPath": "static/gonglue.png",
-				"text": "搜索"
+				"text": "攻略"
 			},
 			{
 				"pagePath": "pages/my/my",
@@ -77,9 +97,9 @@
 			}
 		]
 	},
-	
-	
-	
+
+
+
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

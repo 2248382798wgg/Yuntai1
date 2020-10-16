@@ -1,6 +1,15 @@
 <template>
 	<view>
+		<view>
+			<image style="width: 100%;height: 350rpx;" src="../../static/e241fed057d0402699aeb6bbaf6d208.jpg"></image>
+		</view>
 		
+		<view style="width: 100%;display: flex;justify-content: center;">
+			<view style="border-radius: 300rpx;overflow: hidden; width: 12vh;height: 12vh;">
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+		
+		</view>
 	</view>
 </template>
 

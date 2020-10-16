@@ -1,0 +1,47 @@
+
+.content {
+	background-color: #FFFFFF;
+}
+ .van-collapse-item {
+	padding-top: 4%;
+	padding-bottom: 4%;
+	font-size: 100rpx;
+	height: auto;
+}
+.van-cell__title {
+	font-size: 25px;
+	font-weight: 500;
+}
+.block {
+	height: auto;
+}
+.blockone {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	border-bottom: 1rpx solid #E8E8E8;
+	padding-bottom: 2.5%;
+	margin-bottom: 3.5%;
+}
+.blockone image {
+	width: 100rpx;
+	height: 60rpx;
+}
+.left {
+	width: 15%;
+}
+.right {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	width: 80%;
+	margin-left: 2.5%;
+	font-size: 30rpx;
+	line-height: 33px;
+	color: #333333;
+}
+

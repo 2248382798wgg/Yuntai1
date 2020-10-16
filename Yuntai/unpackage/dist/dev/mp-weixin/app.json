@@ -5,7 +5,11 @@
     "pages/my/my",
     "pages/guide/guide",
     "pages/ticket/ticket",
-    "pages/particulars/particulars"
+    "pages/particulars/particulars",
+    "pages/referral/referral",
+    "pages/spot/spot",
+    "pages/gorge/gorge",
+    "pages/buy/buy"
   ],
   "subPackages": [],
   "window": {
@@ -30,7 +34,7 @@
         "pagePath": "pages/strategy/strategy",
         "iconPath": "static/gonglue1.png",
         "selectedIconPath": "static/gonglue.png",
-        "text": "搜索"
+        "text": "攻略"
       },
       {
         "pagePath": "pages/my/my",

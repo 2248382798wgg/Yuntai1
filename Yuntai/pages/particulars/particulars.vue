@@ -33,7 +33,8 @@
 			<button is-link @click="showPopup" style="background-color: #00BF45;color: #FFFFFF;border-radius: 0;">立即购买</button>
 		</view>
 		<!-- 立即购买 -->
-		<van-popup :show="show" @close="onClose" position="bottom" custom-style="height: 60%;" closeable close-icon="close">
+		<van-popup :show="show" @close="onClose" position="bottom" custom-style="height: 60%;" closeable close-icon="close"
+		 z-index='88'>
 			<view style="margin: 5%;color: #00BF45;">请填写订购信息</view>
 			<!-- 手机号 -->
 			<view style="margin-left: 3%;">
@@ -42,7 +43,23 @@
 				</van-cell-group>
 			</view>
 			<!-- 手机号 -->
-			<view style="margin-left: 7%;margin-top: 5%;">选择时间</view>
+			<!-- <view style="margin-left: 7%;margin-top: 5%;"  is-link>选择时间</view> -->
+			<view style="margin-left: 3%;" is-link @click="time">
+				<van-cell-group>
+					<van-field label='选择时间' :value="times" placeholder="请选择日期" border="false" />
+				</van-cell-group>
+			</view>
+			<van-popup z-index='99' :show="shows" @close="onCloses" position="bottom" custom-style="height: 60%;">
+				<van-datetime-picker type="date"
+				  :value="currentDate"
+				  @input="onInput"
+				  :min-date="minDate"
+				  :formatter="formatter"
+				  @confirm='confirm'
+				  @cancel='cancel'
+				/>
+			</van-popup>
+
 
 			<!-- 订票数量 -->
 			<view>
@@ -50,22 +67,36 @@
 					<view style="width:25%;">订票数量</view>
 					<van-stepper value="1" @plus="onChange" @minus='onminus' />
 				</view>
-				<view v-for='(item,index) in items' :key='index' style="display: flex;margin-left: 7%;margin-top: 3%;">
-					<view style="margin-top: 2%;">
-						游客姓名{{index+1}}
+				<view v-for='(item,index) in items' :key='index'>
+					<view style="display: flex;margin-left: 7%;margin-top: 3%;">
+						<view style="margin-top: 2%;">
+							游客姓名{{index+1}}
+						</view>
+						<van-cell-group>
+							<van-field :value="name" placeholder="请填写游客姓名" border="false" />
+						</van-cell-group>
 					</view>
-					<van-cell-group>
-						<van-field :value="phone" placeholder="请输入手机号" border="false" />
-					</van-cell-group>
+					<view style="display: flex;margin-left: 7%;margin-top: 3%;">
+						<view style="margin-top: 2%;">
+							身份证号{{index+1}}
+						</view>
+						<van-cell-group>
+							<van-field :value="card" placeholder="请输入手机号" border="false" />
+						</van-cell-group>
+					</view>
+					
 				</view>
 			</view>
 			<!-- 订票数量 -->
 
 			<view>
-				
+
 				<view style="position: fixed;display: flex;bottom: 0;margin-left: 10%;">
 					<view style="margin-top: 5%;">合计：{{ner.parice}}</view>
-					<button style="background-color:#00BF45;color: #FFFFFF;">立即购买</button>
+					<view>
+						<button style="background-color:#00BF45;color: #FFFFFF;" @click="buy">立即购买</button>
+					</view>
+
 				</view>
 			</view>
 
@@ -79,17 +110,37 @@
 			return {
 				ner: '',
 				show: false,
+				shows: false,
 				phone: '',
-				items: ['']
+				items: [''],
+				times: '',
+				name:'',
+				card:'',
+				currentDate: new Date().getTime(),
+				    minDate: new Date().getTime(),
+				    
 			}
 		},
 		methods: {
+			buy(){
+				var id =this.ner
+				var data = {
+					id :id.id,
+					img :id.img,
+					name :id.name,
+					parice:id.price,
+					len:this.items.length
+				}
+				uni.navigateTo({
+					url: '../buy/buy?data=' + encodeURIComponent(JSON.stringify(data))
+				})
+			},
 			onChange(event) {
-				console.log(event.detail);
+
 				this.items.push('')
 			},
 			onminus() {
-				this.items.splice(this.items.length-1,1)
+				this.items.splice(this.items.length - 1, 1)
 			},
 			onclick() {
 
@@ -101,6 +152,49 @@
 			onClose() {
 				this.show = false
 			},
+			onCloses() {
+				this.show = false
+			},
+			time() {
+				this.shows = true
+			},
+			onInput(event) {
+			     this.currentDate=event.detail
+			    // });
+			  },
+			  cancel(){
+				  this.shows = false
+			  },
+			  confirm(val){
+				  this.shows = false
+				  var timestamp = val.detail;//获取过来的时间戳
+				  var date =new Date(timestamp);//转换成正确的时间
+				  
+				   var Y = date.getFullYear() +'年';//年
+				  
+				    var  M = (date.getMonth() +1 <10 ?'0' + (date.getMonth() +1) : date.getMonth() +1) +'月';
+				  
+				    var  D = date.getDate() +'日';
+				  var time = Y+'-'+M+'-'+D//拼接到一块赋值然后输出就ok了
+				  this.times = time
+			  },
+			      // 这个是组件转化时间的方法
+			      formatter (type, value) {
+			        if (type === 'year') {
+			          return `${value}年`
+			        } else if (type === 'month') {
+			          return `${value}月`
+			        } else if (type === 'day') {
+			          return `${value}日`
+			        } else if (type === 'hour') {
+			          return `${value}时`
+			        } else if (type === 'minute') {
+			          return `${value}分`
+			        } else if (type === 'second') {
+			          return `${value}秒`
+			        }
+			        return value
+			      }
 		},
 		onLoad(options) {
 			var ner = JSON.parse(decodeURIComponent(options.data));

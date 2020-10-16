@@ -275,7 +275,7 @@ var _index = _interopRequireDefault(__webpack_require__(/*! ../../testdata/index
 //
 //
 //引入js文件
-var _default = { data: function data() {return { images: '', shops: '', sceniced: '', hots: '', hoteds: '' };}, created: function created() {}, onLoad: function onLoad() {console.log(_index.default);this.images = _index.default.image;this.shops = _index.default.shop;this.sceniced = _index.default.scenic;this.hots = _index.default.hot;this.hoteds = _index.default.hoted;}, methods: { guide: function guide(e) {if (e == 0) {}if (e == 1) {uni.navigateTo({ url: '../ticket/ticket' });}if (e == 2) {}if (e == 3) {uni.navigateTo({ url: '../guide/guide' });}} } };exports.default = _default;
+var _default = { data: function data() {return { images: '', shops: '', sceniced: '', hots: '', hoteds: '' };}, created: function created() {}, onLoad: function onLoad() {console.log(_index.default);this.images = _index.default.image;this.shops = _index.default.shop;this.sceniced = _index.default.scenic;this.hots = _index.default.hot;this.hoteds = _index.default.hoted;}, methods: { guide: function guide(e) {if (e == 0) {uni.navigateTo({ url: '../referral/referral' });}if (e == 1) {uni.navigateTo({ url: '../ticket/ticket' });}if (e == 2) {}if (e == 3) {uni.navigateTo({ url: '../guide/guide' });}}, user: function user(e) {if (e == 0) {uni.navigateTo({ url: '../spot/spot' });}if (e == 1) {}if (e == 2) {}} } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
