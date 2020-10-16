@@ -28,6 +28,29 @@
 				"navigationBarBackgroundColor": "#00BF45"
 			}
         }
+        ,{
+            "path" : "pages/ticket/ticket",
+            "style" : {
+				"navigationBarTitleText": "预定门票",
+				"navigationBarBackgroundColor": "#00BF45",
+				"usingComponents": {
+				  "van-tab": "../../wxcomponents/dist/tab/index",
+				  "van-tabs": "../../wxcomponents/dist/tabs/index"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/particulars/particulars",
+            "style" : {
+				"navigationBarTitleText": "购票详情",
+				"usingComponents": {
+				  "van-popup": "../../wxcomponents/dist/popup/index",
+				  "van-field": "../../wxcomponents/dist/field/index",
+				  "van-stepper": "../../wxcomponents/dist/stepper/index",
+				   "van-datetime-picker": "../../wxcomponents/dist/datetime-picker/index"
+				}
+			}
+        }
     ],
 	
 	"tabBar": {

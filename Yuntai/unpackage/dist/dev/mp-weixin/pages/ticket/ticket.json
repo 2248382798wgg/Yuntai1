@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "预定门票",
+  "navigationBarBackgroundColor": "#00BF45",
+  "usingComponents": {
+    "van-tab": "../../wxcomponents/dist/tab/index",
+    "van-tabs": "../../wxcomponents/dist/tabs/index"
+  }
+}

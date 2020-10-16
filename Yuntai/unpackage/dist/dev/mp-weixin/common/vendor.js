@@ -760,7 +760,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7096,7 +7096,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7117,14 +7117,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7200,7 +7200,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7777,10 +7777,10 @@ function normalizeComponent (
 /*!*********************************************************!*\
   !*** D:/1.eat snake/project/Yuntai/testdata/index.json ***!
   \*********************************************************/
-/*! exports provided: image, shop, scenic, hot, hoted, default */
+/*! exports provided: image, shop, scenic, hot, hoted, titles, door, door1, default */
 /***/ (function(module) {
 
-module.exports = {"image":[{"img":"../../static/timg%20(2).jpg"},{"img":"../../static/timg%20(3).jpg"},{"img":"../../static/timg%20(4).jpg"},{"img":"../../static/timg%20(5).jpg"},{"img":"../../static/timg.jpg"}],"shop":[{"shopping":"../../static/0.1.jpg","name":"云台山介绍"},{"shopping":"../../static/0.jpg","name":"购票"},{"shopping":"../../static/0.2.jpg","name":"编写游记"},{"shopping":"../../static/0.3.jpg","name":"导览"}],"scenic":[{"picture":"../../static/0.4.jpg","name":"景点介绍"},{"picture":"../../static/0.5.jpg","name":"建议"},{"picture":"../../static/0.6.jpg","name":"停车"}],"hot":[{"name":"红石峡","img":"../../static/timg%20(6).jpg"},{"name":"茱萸峰","img":"../../static/timg%20(8).jpg"}],"hoted":[{"name":"潭瀑峡","img":"../../static/timg%20(9).jpg"},{"name":"泉瀑峡","img":"../../static/u=3340691132,100457810&fm=26&gp=0.jpg"}]};
+module.exports = {"image":[{"img":"../../static/timg%20(2).jpg"},{"img":"../../static/timg%20(3).jpg"},{"img":"../../static/timg%20(4).jpg"},{"img":"../../static/timg%20(5).jpg"},{"img":"../../static/timg.jpg"}],"shop":[{"shopping":"../../static/0.1.jpg","name":"云台山介绍"},{"shopping":"../../static/0.jpg","name":"购票"},{"shopping":"../../static/0.2.jpg","name":"编写游记"},{"shopping":"../../static/0.3.jpg","name":"导览"}],"scenic":[{"picture":"../../static/0.4.jpg","name":"景点介绍"},{"picture":"../../static/0.5.jpg","name":"建议"},{"picture":"../../static/0.6.jpg","name":"停车"}],"hot":[{"name":"红石峡","img":"../../static/timg%20(6).jpg"},{"name":"茱萸峰","img":"../../static/timg%20(8).jpg"}],"hoted":[{"name":"潭瀑峡","img":"../../static/timg%20(9).jpg"},{"name":"泉瀑峡","img":"../../static/u=3340691132,100457810&fm=26&gp=0.jpg"}],"titles":[{"name":"门票"},{"name":"索道票"},{"name":"云台山攀岩"},{"name":"云台山栈道"}],"door":[{"id":123,"img":"../../static/timg%20(5).jpg","name":"云台山全年全价票 + 车票(19-59)","price":"180元"},{"id":456,"img":"../../static/timg%20(9).jpg","name":"全年半价票+车票(18岁以下)","price":"120元"},{"id":789,"img":"../../static/timg%20(8).jpg","name":"云台山全年车票(60岁以上)","price":"60元"}],"door1":[{"id":321,"img":"../../static/timg%20(5).jpg","name":"索道往返票","price":"120元"},{"id":654,"img":"../../static/timg%20(9).jpg","name":"索道上乘票","price":"70元"},{"id":987,"img":"../../static/timg%20(8).jpg","name":"索道下称票","price":"65元"}]};
 
 /***/ })
 ]]);

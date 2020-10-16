@@ -35,46 +35,95 @@
 			"name": "导览"
 		}
 	],
-	
-	
-	"scenic":[{
-		"picture":"../../static/0.4.jpg",
-		"name":"景点介绍"
-	},
-	{
-		"picture":"../../static/0.5.jpg",
-		"name":"建议"
-	},
-	{
-		"picture":"../../static/0.6.jpg",
-		"name":"停车"
-	}
+
+
+	"scenic": [{
+			"picture": "../../static/0.4.jpg",
+			"name": "景点介绍"
+		},
+		{
+			"picture": "../../static/0.5.jpg",
+			"name": "建议"
+		},
+		{
+			"picture": "../../static/0.6.jpg",
+			"name": "停车"
+		}
+	],
+
+	"hot": [{
+			"name": "红石峡",
+			"img": "../../static/timg%20(6).jpg"
+		},
+		{
+			"name": "茱萸峰",
+			"img": "../../static/timg%20(8).jpg"
+		}
+	],
+
+
+	"hoted": [{
+			"name": "潭瀑峡",
+			"img": "../../static/timg%20(9).jpg"
+		},
+		{
+			"name": "泉瀑峡",
+			"img": "../../static/u=3340691132,100457810&fm=26&gp=0.jpg"
+		}
+	],
+
+
+	"titles": [{
+			"name": "门票"
+		},
+		{
+			"name": "索道票"
+		},
+		{
+			"name": "云台山攀岩"
+		},
+		{
+			"name": "云台山栈道"
+		}
 	],
 	
-	"hot":[{
-		"name":"红石峡",
-		"img":"../../static/timg%20(6).jpg"
+	"door":[{
+		"id":123,
+		"img":"../../static/timg%20(5).jpg",
+		"name":"云台山全年全价票 + 车票(19-59)",
+		"price":"180元"
 	},
 	{
-		"name":"茱萸峰",
-		"img":"../../static/timg%20(8).jpg"
+		"id":456,
+		"img":"../../static/timg%20(9).jpg",
+		"name":"全年半价票+车票(18岁以下)",
+		"price":"120元"
+	},
+	{
+		"id":789,
+		"img":"../../static/timg%20(8).jpg",
+		"name":"云台山全年车票(60岁以上)",
+		"price":"60元"
 	}
 	],
-	
-	
-	"hoted":[{
-		"name":"潭瀑峡",
-		"img":"../../static/timg%20(9).jpg"
+	"door1":[{
+		"id":321,
+		"img":"../../static/timg%20(5).jpg",
+		"name":"索道往返票",
+		"price":"120元"
 	},
 	{
-		"name":"泉瀑峡",
-		"img":"../../static/u=3340691132,100457810&fm=26&gp=0.jpg"
+		"id":654,
+		"img":"../../static/timg%20(9).jpg",
+		"name":"索道上乘票",
+		"price":"70元"
+	},
+	{
+		"id":987,
+		"img":"../../static/timg%20(8).jpg",
+		"name":"索道下称票",
+		"price":"65元"
 	}
 	]
-	
-	
-	
-	
-	
 
 }

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "购票详情",
+  "usingComponents": {
+    "van-popup": "../../wxcomponents/dist/popup/index",
+    "van-field": "../../wxcomponents/dist/field/index",
+    "van-stepper": "../../wxcomponents/dist/stepper/index",
+    "van-datetime-picker": "../../wxcomponents/dist/datetime-picker/index"
+  }
+}

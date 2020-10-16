@@ -100,6 +100,9 @@
 				}
 				if(e == 1) {
 					
+					uni.navigateTo({
+						url:'../ticket/ticket'
+					})
 				}
 				if(e == 2) {
 					
